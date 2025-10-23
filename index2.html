@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beau Miles - EpicBio.io Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 60px;
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 25px;
+            display: block;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: -1px;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .icon-row a {
+            color: #ffffff;
+            font-size: 26px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .icon-row a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        .bio {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 17px;
+            text-align: left;
+            background: transparent !important;
+            color: #f0f8ff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .bio p {
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        .bio a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .bio a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transition: width 0.3s ease;
+        }
+        .bio a:hover::after {
+            width: 100%;
+        }
+        .bio a:hover {
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+        footer {
+            margin-top: 60px;
+            padding: 25px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .icon-row {
+                gap: 20px;
+            }
+            .icon-row a {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+            }
+            .bio {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .icon-row {
+                gap: 15px;
+            }
+            .icon-row a {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_n5ukU-FY0XsCNZImLqgmdJ7V0s2TqrY3KBxOitZWadfSM=s900-c-k-c0x00ffffff-no-rj" alt="Beau Miles Profile" class="profile-img">
+            <h1>Beau Miles</h1>
+            <div class="icon-row">
+                <a href="https://www.youtube.com/beaumiles" title="YouTube" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.patreon.com/beaumiles" title="Patreon" target="_blank" rel="noopener">
+                    <i class="fab fa-patreon"></i>
+                </a>
+                <a href="https://www.instagram.com/beauisms/" title="Instagram" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/beaumilesfilm/" title="Facebook" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://beaumiles.com/" title="Website" target="_blank" rel="noopener">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </header>
+        
+        <div class="bio">
+            <p>Beau Miles, born on December 21, 1979, in Australia, is a redheaded adventurer whose life reads like a series of audacious footnotes in the book of human curiosity. Growing up in the swamps and marshes of Victoria, young Beau spent his childhood hunting lost golf balls, half-hoping to stumble upon something more macabre—like a forgotten body part amid the muck. This early fascination with the odd and overlooked set the tone for a life spent probing the edges of the ordinary, cloaked in sunscreen and big hats to shield his fair skin from the relentless Aussie sun.</p>
+
+            <p>By 1999, Beau enrolled at Monash University in Melbourne, earning a Bachelor of Education and Bachelor of Sport and Outdoor Recreation with a minor in Geography. He dove headfirst into the world of outdoor education, later becoming a lecturer at Monash while pursuing his PhD in expeditionary learning. His 2018 thesis, "<a href="https://beaumiles.com/" target="_blank" rel="noopener">The Secret Life of the Sea Kayaker</a>," was no dry academic tome—it chronicled his own grueling adventures, including a 2,000-kilometer paddle around the southern tip of Africa.</p>
+
+            <p>In 2016, Beau launched his <a href="https://www.youtube.com/beaumiles" target="_blank" rel="noopener">YouTube channel</a> as part of his PhD project, debuting with the six-part "Bass by Kayak" series—a raw account of kayaking Australia's Bass Strait. What started as an academic experiment exploded into a full-time pursuit. By 2021, he quit lecturing to become a dedicated dad and YouTuber, channeling his energy into homespun challenges that turn the mundane into magic.</p>
+
+            <p>Beau's adventures often pay homage to his Gippsland roots, like spending a night in a towering Strzelecki gum tree to highlight endangered species, or secretly building his wife Helen a $60 cabin from scavenged junk. He's a self-proclaimed "poly-jobist"—filmmaker, speaker, writer, and maker of things from other people's trash. His 2021 book, <a href="https://beaumiles.com/" target="_blank" rel="noopener">The Backyard Adventurer</a>, distills this philosophy, urging readers to find thrill in the familiar.</p>
+
+            <p>Today, with over 774,000 subscribers and 74 million views, Beau continues to explore thresholds big and small—whether pushing a wheelbarrow in a race or eating only beans for 40 days. Support his offbeat quests on <a href="https://www.patreon.com/beaumiles" target="_blank" rel="noopener">Patreon</a>, catch glimpses on <a href="https://www.instagram.com/beauisms/" target="_blank" rel="noopener">Instagram</a>, or connect via <a href="https://www.facebook.com/beaumilesfilm/" target="_blank" rel="noopener">Facebook</a>. Beau Miles isn't just adventuring; he's reminding us that the world's wonders hide in our backyards.</p>
+        </div>
+        
+        <footer>
+            <strong>EpicBio.io</strong> - Your Story Lives Here | <a href="#" style="color: #ffffff; text-decoration: none;">$10/year</a>
+        </footer>
+    </div>
+</body>
+</html>
